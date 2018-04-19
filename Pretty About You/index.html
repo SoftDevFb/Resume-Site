@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<!-- Developer:   Frankie Barrios
+     Date:        4/13/18
+     Purpose:     Index page for Resume site
+-->
+
+<head>
+  <title>Resume</title>
+  <!-- Add Icon to tab -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="slideshowStyles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="gridStyles.css" />
+</head>
+
+<body>
+  <!--Top Menu Code Begins Here -->
+  <div class="icon-bar">
+    <a class="active" href="http://cis130.net/SP18/frankieb/resume/"><i class="fa fa-home"></i></a>
+    <a href="https://www.bing.com/"><i class="fa fa-search"></i></a>
+    <a href="flexGrid.html"><i class="fa fa-photo"></i></a>
+    <a href="https://www.google.com/maps/@37.2132761,-93.3237922,15z"><i class="fa fa-map"></i></a>
+    <a href="contact.html"><i class="fa fa-book"></i></a>
+  </div>
+  <!-- Top Menu Code Ends Here -->
+
+  <!-- Slideshow Starts Here -->
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="banner1.jpg" style="width:100%;height:450px;">
+      <div class="text">Knowledgable</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="banner2.jpg" style="width:100%; height:450px;">
+      <div class="text">Organized</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="banner3.jpg" style="width:100%; height:450px;">
+      <div class="text">Innovative</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="banner4.jpg" style="width:100%; height:450px;">
+      <div class="text">Genius</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+
+    <!--<span class="dot" onclick="currentSlide(4)"></span>-->
+  </div>
+
+  <!-- SLIDESHOW CODE ENDS HERE -->
+
+
+  <!-- Image Links Start -->
+  <div class="row">
+    <div class="column">
+      <a href="https://www.linkedin.com/in/frank-barrios">
+    <img src="skills.jpg" alt="Skills Photo" style="width:100%; height: 215px;">
+  </a>
+    </div>
+    <div class="column">
+      <a href="https://www.linkedin.com/in/frank-barrios">
+    <img src="experience.jpg" alt="Experience Photo" style="width:100%; height: 215px;">
+</a>
+    </div>
+    <div class="column">
+      <a href="https://www.linkedin.com/in/frank-barrios">
+    <img src="education.jpg" alt="Education Photo" style="width:100%; height: 215px;"
+</a>
+    </div>
+    <div class="column">
+      <a href="https://github.com/softwarebjj/C-1ClassWork">
+    <img src="projects.jpg" alt="Projects Photo" style="width:100%; height: 215px;">
+  </a>
+    </div>
+  </div>
+
+  <!-- Image links End -->
+  <!-- Image links styling -->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .column {
+      float: left;
+      width: 50%;
+      padding: 15px;
+    }
+
+    /* Clearfix (clear floats) */
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  </style>
+  <!-- End of image link styling -->
+  <!-- Footer Code Begins Here -->
+
+  <div class="navbar">
+    <a href="http://cis130.net/SP18/frankieb/" class="active">About Me Page</a>
+    <a href="http://cis130.net/SP18/frankieb/product.html">Product Page</a>
+    <a href="http://cis130.net/SP18/frankieb/Schedule/inClassSchedule/">Class Schedule</a>
+    <a href="http://cis130.net/SP18/frankieb/shady-shades/">Shady Shades</a>
+    <a href="http://cis130.net/SP18/frankieb/Advising/Reg%20Form/">Advising</a>
+    <a href="http://cis130.net/SP18/frankieb/Travel/">Travel</a>
+  </div>
+
+<div class="main">
+    <h1>Frankie Barrios</h1>
+    <p>Student, Genius, Visionary</p>
+  </div>
+
+  <!-- END OF FOOTER CODE -->
+
+  <!-- JS FOR SLIDESHOW -->
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+  <!-- END OF JS FOR SLIDESHOW -->
+
+</body>
+
+</html>

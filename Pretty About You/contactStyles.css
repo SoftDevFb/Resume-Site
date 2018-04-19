@@ -1,0 +1,35 @@
+/*Developer:  Frankie Barrios
+  Date:       4/13/2018
+  Purpose:    Style sheet for contact page/ index
+*/
+
+body {
+  background-image: url(makeAppt.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #508ec7;
+}
+
+.container {
+  margin: auto;
+  width: 80%;
+  background-color: #eeeeee;
+  padding: 25px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  text-align: center
+}
+
+label {
+  display: block;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.submit {
+  position: initial;
+  width: initial;
+}
